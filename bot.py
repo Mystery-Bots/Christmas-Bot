@@ -28,4 +28,9 @@ async def check(ctx):
     gifts = random.randint(5,10)
     await ctx.send(f"{user.mention}, You collected {gifts} :gift: from under the tree!")
 
+
+@bot.command()
+async def userinfo(ctx):
+    await ctx.send("not started")
+
 bot.run(token)
