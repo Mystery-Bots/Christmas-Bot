@@ -8,6 +8,7 @@ bot = commands.Bot(command_prefix="+", description="The bot for the Christmas ev
 async def on_ready():
     print("Loaded")
 
+
 @bot.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandOnCooldown):
@@ -19,6 +20,7 @@ async def on_command_error(ctx, error):
             await ctx.send(f"You have already collected gifts in the last 24 hours. Try again in `{round(m)} minutes {round(s)} seconds`")
         else:
             await ctx.send(f"You have already collected gifts in the last 24 hours. Try again in `{round(h)} hours {round(m)} minutes`")
+
 
 @bot.command()
 #@commands.cooldown(1,86400.0,type=commands.BucketType.member)
