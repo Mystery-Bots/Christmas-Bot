@@ -18,7 +18,7 @@ async def on_command_error(ctx, error):
         elif h == 0:
             await ctx.send(f"You have already collected gifts in the last 24 hours. Try again in `{round(m)} minutes {round(s)} seconds`")
         else:
-            await ctx.send(f"You have already collected gifts    in the last 24 hours. Try again in `{round(h)} hours {round(m)} minutes`")
+            await ctx.send(f"You have already collected gifts in the last 24 hours. Try again in `{round(h)} hours {round(m)} minutes`")
 
 @bot.command()
 #@commands.cooldown(1,86400.0,type=commands.BucketType.member)
